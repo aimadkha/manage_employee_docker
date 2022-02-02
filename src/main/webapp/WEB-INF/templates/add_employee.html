@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+    <link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+	<h1>add register</h1>
+	<form th:action="@{/insert}" method="post">
+	<div class="mb-3">
+		<div>
+			<label>First Name</label> <input class="form-control" type="text" th:field="*{firstName}" name="firstName" />
+		</div>
+		<div>
+			<label>Last Name</label> <input class="form-control" type="text" th:field="*{lasstName}" name="lastName"/>
+		</div>
+		<div>
+			<label>Email</label> <input class="form-control" type="text" th:field="*{email}" name="email"/>
+		</div>
+		<div>
+			<label>Password</label> <input class="form-control" type="password" th:field="*{password}" name="password"/>
+		</div>
+		<div>
+			<label>Phone Number</label> <input class="form-control" type="text" th:field="*{phone}" name="phone"/>
+		</div>
+		<div>
+			<label>Street</label> <input class="form-control" type="text" th:field="*{phone}" name="line"/>
+		</div>
+		<div>
+			<label>City</label> <input class="form-control" type="text" th:field="*{phone}" name="city"/>
+		</div>
+		<div>
+			<label>Country</label> <input class="form-control" type="text" th:field="*{phone}" name="country"/>
+		</div>
+		
+		<input type="submit" value="Submit">
+		</div>
+	</form>
+</body>
+</html>

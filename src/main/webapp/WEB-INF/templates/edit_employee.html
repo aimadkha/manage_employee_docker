@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+	<h1>Edit employee</h1>
+	<div class="container">
+
+		<form th:action="@{/update}" th:object="${editEmp}"
+			method="POST">
+			<input type="hidden" th:field="*{id}"
+				th:value="${editEmp.id}" name="id" />
+			<div>
+				<label>First name : </label> <input type="text"
+					th:field="*{firstName}" th:value="${editEmp.firstName}" name="firstName"
+					class="form-control mb-2 col-4" />
+			</div>
+			<br>
+			<div>
+				<label>Last Name : </label> <input type="text"
+					th:field="*{lastName}" th:value="${editEmp.lastName}"
+					name="lastName" class="form-control mb-2 col-4" />
+			</div>
+			<br>
+			<div>
+				<label>Email : </label> <input type="text" th:field="*{email}"
+					th:value="${editEmp.email}" name="email"
+					class="form-control mb-2 col-4" />
+			</div>
+			<br>
+
+			<div>
+				<label>Phone : </label> <input type="text" th:field="*{phone}"
+					th:value="${editEmp.phone}" name="phone"
+					class="form-control mb-2 col-4" />
+			</div>
+			<br>
+			<button type="submit" class="btn btn-primary">Update</button>
+		</form>
+	</div>
+
+</body>
+</html>
