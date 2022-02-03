@@ -4,7 +4,10 @@
 	<artifactId>manage_employee</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<properties><finalName>manage_emp</finalName></properties>
+	<properties>
+		<finalName>manage_emp</finalName>
+		<skipTests>true</skipTests>
+	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/jsp-api -->
 		<dependency>
@@ -82,8 +85,6 @@
 			<artifactId>commons-logging</artifactId>
 			<version>1.2</version>
 		</dependency>
-
-
 	</dependencies>
 	<build>
 		<plugins>
@@ -91,7 +92,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<release>16</release>
+					<release>11</release>
 				</configuration>
 			</plugin>
 			<plugin>
